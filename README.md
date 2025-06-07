@@ -24,6 +24,7 @@ fedavg/
 │   ├── config.py         # Configurations
 ├── Dockerfile            # Docker image definition
 ├── requirements.txt      # Dependencies
+├── fedavg.ipynb          # Jupyter notebook
 ├── .gitignore
 
 ```
@@ -40,7 +41,7 @@ You can run this project in **three different ways**:
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook fedavg_notebook.ipynb
+jupyter notebook fedavg.ipynb
 ```
 Walks through local training, aggregation, and evaluation in an interactive manner.
 
