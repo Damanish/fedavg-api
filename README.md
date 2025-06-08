@@ -11,6 +11,19 @@ A complete implementation of Federated Averaging (FedAvg) algorithm for distribu
 - **Modular Architecture**: Clean separation of concerns with multiple Python modules
 - **End-to-End Pipeline**: From data preprocessing to model deployment
 
+## What is Federated Averaging (FedAvg)?
+
+**Federated Averaging (FedAvg)** is a foundational algorithm in **federated learning**, a machine learning paradigm where data remains **decentralized** across multiple devices or clients. Instead of collecting all the data at a central server, FedAvg allows models to be trained locally and only the **model updates** (not the raw data) are shared.
+
+### Key Concepts:
+- **Data Privacy**: Raw data never leaves client devices, which is important in sensitive domains like healthcare or finance.
+- **Decentralized Training**: Each client trains a local model on its own data.
+- **Model Averaging**: The server averages the local model updates to improve a global model.
+
+### Why FedAvg?
+FedAvg is efficient and simple, yet powerful. It reduces communication costs and enhances privacy, making it a go-to algorithm for federated learning applications.
+
+
 ## Project Structure
 
 ```
@@ -84,14 +97,14 @@ docker run -p 8000:8000 damanish/fedavg-api
 - **Parameters**: 
   - `image`: Input image for classification
 
-## 📊 Dataset
+## Dataset
 
 This project uses the **CIFAR-10** dataset, which consists of:
 - 60,000 32x32 color images
 - 10 classes: airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck
 - 50,000 training images and 10,000 test images
 
-## 🧠 Federated Learning Algorithm
+## Federated Learning Algorithm
 
 The implementation uses **Federated Averaging (FedAvg)**, which:
 
@@ -102,7 +115,7 @@ The implementation uses **Federated Averaging (FedAvg)**, which:
 5. **Global Update**: Updated global model is distributed to clients
 
 
-## 📋 Requirements
+## Requirements
 
 ```
 fastapi
@@ -119,11 +132,11 @@ Install all dependencies:
 pip install -r requirements.txt
 ```
 
-## 📈 Performance
+## Performance
 
 The federated learning setup achieves:
 - **Convergence**: Typically converges within 5-10 rounds
-- **Accuracy**: Achieves ~75% accuracy on Cifar10 test set then number of clients = 5 and alpha(for dirichlet partitioning = 0.5)
+- **Accuracy**: Achieves ~75% accuracy on Cifar10 test set then number of clients = 5 and alpha(for dirichlet partitioning) = 0.5
 - **Privacy**: Data remains distributed across clients
 
 ## Contributing
